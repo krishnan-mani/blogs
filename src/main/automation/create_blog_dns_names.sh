@@ -17,7 +17,7 @@ export HOSTED_ZONE_ID="$5"
 export PATH_TO_CHANGE_SET="$6"
 export REGION_NAME="eu-west-1"
 
-    export FQDN="${HOSTNAME}.${SUB_DOMAIN}.equalexperts.in"
+    export FQDN="${HOSTNAME}.${SUB_DOMAIN}"
     export POINTS_TO="${BUCKET_NAME}.s3-website-${REGION_NAME}.amazonaws.com"
     cp cname_resource_record_set.json.template cname_resource_record_set.json
     sed -i '' "s/FQDN/${FQDN}/" cname_resource_record_set.json
